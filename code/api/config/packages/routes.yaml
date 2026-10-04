@@ -1,0 +1,19 @@
+category_index:
+  uri: /api/categories
+  handler: App\Controller\Category\CategoryController::index
+  method: GET
+
+category_show:
+  uri: /api/categories/:id
+  handler: App\Controller\Category\CategoryController::show
+  method: GET
+
+category_articles:
+  uri: /api/categories/:id/articles
+  handler: App\Controller\Article\ArticleController::indexByCategory
+  method: GET
+
+article_show:
+  uri: /api/articles/:id
+  handler: App\Controller\Article\ArticleController::show
+  method: GET
