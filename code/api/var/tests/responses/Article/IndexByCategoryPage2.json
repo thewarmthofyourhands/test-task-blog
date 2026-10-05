@@ -1,0 +1,39 @@
+{
+  "data": [
+    {
+      "id": 104,
+      "image": "https://picsum.photos/600/300",
+      "title": "Database Optimization",
+      "description": "Optimizing databases for growing workloads.",
+      "published_at": "2026-09-12T09:00:00Z",
+      "category_ids": [1, 3],
+      "views_count": 12600
+    },
+    {
+      "id": 105,
+      "image": "https://picsum.photos/600/300",
+      "title": "Message Queues",
+      "description": "Using asynchronous processing in modern applications.",
+      "published_at": "2026-09-10T16:00:00Z",
+      "category_ids": [1],
+      "views_count": 6800
+    },
+    {
+      "id": 106,
+      "image": "https://picsum.photos/600/300",
+      "title": "Distributed Systems",
+      "description": "Fundamentals of building distributed applications.",
+      "published_at": "2026-09-08T13:00:00Z",
+      "category_ids": [1],
+      "views_count": 4200
+    }
+  ],
+  "pagination": {
+    "page": 2,
+    "per_page": 3,
+    "total": 6,
+    "last_page": 2
+  },
+  "message": "Ok",
+  "code": 20000
+}

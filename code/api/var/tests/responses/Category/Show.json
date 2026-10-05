@@ -1,0 +1,9 @@
+{
+  "data": {
+    "id": 1,
+    "name": "Technology",
+    "description": "Articles about technology and software development."
+  },
+  "message": "Ok",
+  "code": 20000
+}
