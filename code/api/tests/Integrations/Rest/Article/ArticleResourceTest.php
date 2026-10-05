@@ -30,7 +30,7 @@ class ArticleResourceTest extends ApiTestCase
         $this->assertSame(200, $response->getStatusCode());
         $this->assertSame($expectedResponse, $response->getBody());
 
-        $request = new Request(HttpMethodsEnum::GET, '/api/categories/1/articles?per_page=3&sort=views_count&order=desc&page=2');
+        $request = new Request(HttpMethodsEnum::GET, '/api/categories/1/articles?per_page=3&page=2&sort=views_count&order=desc');
         $response = $this->application->handle($request);
         $expectedResponse = file_get_contents('./var/tests/responses/Article/IndexByCategorySortByViewsPage2.json');
         $this->assertSame(200, $response->getStatusCode());

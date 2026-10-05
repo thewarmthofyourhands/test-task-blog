@@ -1,38 +1,44 @@
 {
-  "data": [
-    {
-      "id": 102,
-      "image": "https://picsum.photos/600/300",
-      "title": "MySQL Indexing",
-      "description": "Practical guide to database indexes.",
-      "published_at": "2026-09-18T10:00:00Z",
-      "category_ids": [1, 3],
-      "views_count": 15420
+  "data": {
+    "items": [
+      {
+        "id": 102,
+        "image": "https://picsum.photos/600/300",
+        "title": "MySQL Indexing",
+        "description": "Practical guide to database indexes.",
+        "published_at": "2026-09-18T10:00:00Z",
+        "category_ids": [1, 3],
+        "views_count": 15420
+      },
+      {
+        "id": 104,
+        "image": "https://picsum.photos/600/300",
+        "title": "Database Optimization",
+        "description": "Optimizing databases for growing workloads.",
+        "published_at": "2026-09-12T09:00:00Z",
+        "category_ids": [1, 3],
+        "views_count": 12600
+      },
+      {
+        "id": 103,
+        "image": "https://picsum.photos/600/300",
+        "title": "Caching Strategies",
+        "description": "Caching approaches for high-load applications.",
+        "published_at": "2026-09-15T14:00:00Z",
+        "category_ids": [1, 3],
+        "views_count": 8700
+      }
+    ],
+    "pagination": {
+      "page": 1,
+      "per_page": 3,
+      "total": 6,
+      "last_page": 2
     },
-    {
-      "id": 104,
-      "image": "https://picsum.photos/600/300",
-      "title": "Database Optimization",
-      "description": "Optimizing databases for growing workloads.",
-      "published_at": "2026-09-12T09:00:00Z",
-      "category_ids": [1, 3],
-      "views_count": 12600
-    },
-    {
-      "id": 103,
-      "image": "https://picsum.photos/600/300",
-      "title": "Caching Strategies",
-      "description": "Caching approaches for high-load applications.",
-      "published_at": "2026-09-15T14:00:00Z",
-      "category_ids": [1, 3],
-      "views_count": 8700
+    "sort": {
+      "field": "views_count",
+      "order": "desc"
     }
-  ],
-  "pagination": {
-    "page": 1,
-    "per_page": 3,
-    "total": 6,
-    "last_page": 2
   },
   "message": "Ok",
   "code": 20000
