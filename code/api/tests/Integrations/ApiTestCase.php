@@ -9,6 +9,7 @@ use App\TestApplication;
 use App\Application;
 use Eva\Database\ConnectionStoreInterface;
 use PHPUnit\Framework\TestCase;
+use Tests\Integrations\Seed\MainTestSeed;
 
 class ApiTestCase extends TestCase
 {
@@ -57,11 +58,19 @@ class ApiTestCase extends TestCase
         }
     }
 
+    private function makeSeed(): void
+    {
+        $connectionStore = $this->application->getContainer()->get(ConnectionStoreInterface::class);
+        assert($connectionStore instanceof ConnectionStoreInterface);
+        MainTestSeed::init($connectionStore);
+    }
+
     protected function setUp(): void
     {
         $this->application = new TestApplication();
         $this->clearRedis();
         $this->clearDb();
+        $this->makeSeed();
 
         parent::setUp();
     }
