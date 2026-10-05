@@ -1,6 +1,7 @@
 list: Eva\Console\Commands\ListCommand
 app.dto.creator: Eva\DtoCreator\DtoCreatorCommand
-db.migrations.create: App\Command\Migrations\CreateCommand
-db.migrations.migrate: App\Command\Migrations\MigrateCommand
-db.migrations.rollback: App\Command\Migrations\RollbackCommand
-db.migrations.status: App\Command\Migrations\StatusCommand
+
+db.migrations.create: Eva\Database\Migrations\Commands\CreateCommand
+db.migrations.migrate: Eva\Database\Migrations\Commands\MigrateCommand
+db.migrations.rollback: Eva\Database\Migrations\Commands\RollbackCommand
+db.migrations.status: Eva\Database\Migrations\Commands\StatusCommand
