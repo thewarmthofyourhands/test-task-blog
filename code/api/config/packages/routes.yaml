@@ -17,3 +17,8 @@ article_show:
   uri: /api/articles/:id
   handler: App\Controller\Article\ArticleController::show
   method: GET
+
+welcome:
+  uri: /api/welcome
+  handler: App\Controller\WelcomeController::index
+  method: GET

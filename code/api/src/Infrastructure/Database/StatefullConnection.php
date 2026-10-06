@@ -17,8 +17,7 @@ class StatefullConnection implements ConnectionInterface
 
     protected int $lastConnectionTime;
     protected bool $isConnecting = false;
-    protected bool $isOpenToUse = true;
-    private array $statements = [];
+
     public function __construct(
         string $host,
         string $port,
@@ -30,29 +29,12 @@ class StatefullConnection implements ConnectionInterface
         $this->createConnection();
     }
 
-    public function take(): void
-    {
-        $this->isOpenToUse = false;
-    }
-
-    public function isOpen(): bool
-    {
-        return $this->isOpenToUse;
-    }
-
-    public function free(): void
-    {
-        $this->isOpenToUse = true;
-    }
-
     protected function createConnection(): void
     {
         if (false === $this->isConnecting) {
             $this->lastConnectionTime = time();
             $this->isConnecting = true;
             $this->pdo = new PDO($this->dsn, $this->username, $this->password);
-            $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $this->pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, true);
             $this->isConnecting = false;
 
             return;
@@ -104,13 +86,6 @@ class StatefullConnection implements ConnectionInterface
         $this->checkConnection();
         return $this->pdo->inTransaction();
     }
-    public function getStmt(string $sql): Statement {
-        if (!array_key_exists($sql, $this->statements)) {
-            $this->statements[bin2hex($sql)] = new StatefullStatement($this->pdo->prepare($sql));
-        }
-
-        return $this->statements[bin2hex($sql)];
-    }
 
     public function prepare(string $sql, null|array $parameters = null, array $options = []): Statement
     {
@@ -135,15 +110,13 @@ class StatefullConnection implements ConnectionInterface
             }
 
             $parameters = array_merge($parameters, $listParameters);
-//            $stmt = new Statement($this->pdo->prepare($sql, $options));
-            $stmt = $this->getStmt($sql);
+            $stmt = new Statement($this->pdo->prepare($sql, $options));
 
             foreach ($parameters as $parameterName => $parameterValue) {
                 $stmt->bindParam(':' . $parameterName, $parameterValue);
             }
         } else {
-//            $stmt = new Statement($this->pdo->prepare($sql, $options));
-            $stmt = $this->getStmt($sql);
+            $stmt = new Statement($this->pdo->prepare($sql, $options));
         }
 
         return $stmt;

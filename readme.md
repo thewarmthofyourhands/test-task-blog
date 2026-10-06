@@ -3,6 +3,7 @@
 //запускать из основной папки
 docker compose up -d
 docker compose exec api composer i
+docker compose exec api php ./bin/console db.migrations.migrate
 ````
 
 ### Local Tests
@@ -20,9 +21,9 @@ export const options = {
   scenarios: {
     rps: {
       executor: "constant-arrival-rate",
-      rate: 4000,
+      rate: 8000,
       timeUnit: "1s",
-      duration: "3s",
+      duration: "4s",
       preAllocatedVUs: 300,
       maxVUs: 5000,
     },
@@ -33,7 +34,7 @@ export const options = {
 };
 
 export default function () {
-  const res = http.get("http://127.0.0.1:8082/api/categories/1");
+  const res = http.get("http://127.0.0.1:8082/api/welcome");
 }
 K6
 ````

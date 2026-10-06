@@ -13,12 +13,6 @@ php server.php reload -g
 ```
 
 ````
-docker compose exec --user 1000:1000 api php ./bin/console list
-docker compose exec --user 1000:1000 api php ./bin/console app.dto.creator --sourcePath=/code/config/packages/dto/
-
-````
-
-````
 docker compose logs api
 docker compose exec api composer i
 docker compose exec api php ./bin/console list
