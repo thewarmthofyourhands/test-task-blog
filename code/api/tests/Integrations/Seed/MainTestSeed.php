@@ -20,18 +20,18 @@ class MainTestSeed
             $categories = [
                 [
                     'id' => 1,
-                    'name' => 'Backend',
-                    'description' => 'Backend development and server-side engineering.',
+                    'name' => 'Technology',
+                    'description' => 'Articles about technology and software development.',
                 ],
                 [
                     'id' => 2,
-                    'name' => 'Frontend',
-                    'description' => 'Frontend development and user interfaces.',
+                    'name' => 'Science',
+                    'description' => 'Articles about science and research.',
                 ],
                 [
                     'id' => 3,
-                    'name' => 'Databases',
-                    'description' => 'Database design, optimization and performance.',
+                    'name' => 'Backend',
+                    'description' => 'Articles about backend.',
                 ],
             ];
 
@@ -69,7 +69,7 @@ class MainTestSeed
                     'title' => 'Building Scalable APIs',
                     'image' => 'https://picsum.photos/600/300',
                     'description' => 'How to design APIs for high-load systems.',
-                    'content' => 'How to design APIs for high-load systems.',
+                    'content' => 'Full article content goes here. This is an example of the complete article text.',
                     'views_count' => 5200,
                     'published_at' => '2026-09-20 12:00:00',
                 ],
@@ -117,6 +117,24 @@ class MainTestSeed
                     'content' => 'Fundamentals of building distributed applications.',
                     'views_count' => 4200,
                     'published_at' => '2026-09-08 13:00:00',
+                ],
+                [
+                    'id' => 201,
+                    'title' => 'The Future of Space Exploration',
+                    'image' => 'https://picsum.photos/600/300',
+                    'description' => 'What comes next in space exploration.',
+                    'content' => 'Article Text.',
+                    'views_count' => 4100,
+                    'published_at' => '2026-09-19 08:00:00',
+                ],
+                [
+                    'id' => 202,
+                    'title' => 'Understanding Black Holes',
+                    'image' => 'https://picsum.photos/600/300',
+                    'description' => 'An introduction to black holes and modern astrophysics.',
+                    'content' => 'Article Text.',
+                    'views_count' => 11200,
+                    'published_at' => '2026-09-17 11:00:00',
                 ],
             ];
 
@@ -176,6 +194,9 @@ class MainTestSeed
                 [105, 1],
 
                 [106, 1],
+
+                [201, 2],
+                [202, 2],
             ];
 
             $stmt = $connection->prepare(<<<'SQL'

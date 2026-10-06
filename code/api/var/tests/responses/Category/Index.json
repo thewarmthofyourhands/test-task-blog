@@ -11,8 +11,8 @@
           "title": "Building Scalable APIs",
           "description": "How to design APIs for high-load systems.",
           "published_at": "2026-09-20T12:00:00Z",
-          "category_ids": [1, 3],
-          "views_count": 5200
+          "views_count": 5200,
+          "category_ids": [1, 3]
         },
         {
           "id": 102,
@@ -20,8 +20,8 @@
           "title": "MySQL Indexing",
           "description": "Practical guide to database indexes.",
           "published_at": "2026-09-18T10:00:00Z",
-          "category_ids": [1, 3],
-          "views_count": 15420
+          "views_count": 15420,
+          "category_ids": [1, 3]
         },
         {
           "id": 103,
@@ -29,8 +29,8 @@
           "title": "Caching Strategies",
           "description": "Caching approaches for high-load applications.",
           "published_at": "2026-09-15T14:00:00Z",
-          "category_ids": [1, 3],
-          "views_count": 8700
+          "views_count": 8700,
+          "category_ids": [1, 3]
         }
       ]
     },
@@ -45,8 +45,8 @@
           "title": "The Future of Space Exploration",
           "description": "What comes next in space exploration.",
           "published_at": "2026-09-19T08:00:00Z",
-          "category_ids": [2],
-          "views_count": 4100
+          "views_count": 4100,
+          "category_ids": [2]
         },
         {
           "id": 202,
@@ -54,8 +54,8 @@
           "title": "Understanding Black Holes",
           "description": "An introduction to black holes and modern astrophysics.",
           "published_at": "2026-09-17T11:00:00Z",
-          "category_ids": [2],
-          "views_count": 11200
+          "views_count": 11200,
+          "category_ids": [2]
         }
       ]
     },
@@ -70,8 +70,8 @@
           "title": "Building Scalable APIs",
           "description": "How to design APIs for high-load systems.",
           "published_at": "2026-09-20T12:00:00Z",
-          "category_ids": [1, 3],
-          "views_count": 5200
+          "views_count": 5200,
+          "category_ids": [1, 3]
         },
         {
           "id": 102,
@@ -79,8 +79,8 @@
           "title": "MySQL Indexing",
           "description": "Practical guide to database indexes.",
           "published_at": "2026-09-18T10:00:00Z",
-          "category_ids": [1, 3],
-          "views_count": 15420
+          "views_count": 15420,
+          "category_ids": [1, 3]
         },
         {
           "id": 103,
@@ -88,8 +88,8 @@
           "title": "Caching Strategies",
           "description": "Caching approaches for high-load applications.",
           "published_at": "2026-09-15T14:00:00Z",
-          "category_ids": [1, 3],
-          "views_count": 8700
+          "views_count": 8700,
+          "category_ids": [1, 3]
         }
       ]
     }

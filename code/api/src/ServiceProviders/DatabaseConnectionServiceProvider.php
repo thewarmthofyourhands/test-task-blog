@@ -15,7 +15,8 @@ class DatabaseConnectionServiceProvider
         $env = $container->getParameter('env');
         $connectionStore->add(
             'default',
-            new StatefullConnection(
+            new \Eva\Database\PDO\Connection(
+            // new StatefullConnection(
                 $env['DB_HOST'],
                 $env['DB_PORT'],
                 $env['DB_NAME'],

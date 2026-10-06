@@ -7,16 +7,6 @@
     "content": "Full article content goes here. This is an example of the complete article text.",
     "published_at": "2026-09-20T12:00:00Z",
     "views_count": 5200,
-    "categories": [
-      {
-        "id": 1,
-        "name": "Technology"
-      },
-      {
-        "id": 3,
-        "name": "Backend"
-      }
-    ],
     "category_ids": [1, 3],
     "related_articles": [
       {
@@ -25,8 +15,8 @@
         "title": "MySQL Indexing",
         "description": "Practical guide to database indexes.",
         "published_at": "2026-09-18T10:00:00Z",
-        "category_ids": [1, 3],
-        "views_count": 15420
+        "views_count": 15420,
+        "category_ids": [1, 3]
       },
       {
         "id": 103,
@@ -34,8 +24,8 @@
         "title": "Caching Strategies",
         "description": "Caching approaches for high-load applications.",
         "published_at": "2026-09-15T14:00:00Z",
-        "category_ids": [1, 3],
-        "views_count": 8700
+        "views_count": 8700,
+        "category_ids": [1, 3]
       },
       {
         "id": 104,
@@ -43,8 +33,8 @@
         "title": "Database Optimization",
         "description": "Optimizing databases for growing workloads.",
         "published_at": "2026-09-12T09:00:00Z",
-        "category_ids": [1, 3],
-        "views_count": 12600
+        "views_count": 12600,
+        "category_ids": [1, 3]
       }
     ]
   },

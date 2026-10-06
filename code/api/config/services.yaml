@@ -61,6 +61,12 @@ services:
   Eva\DtoCreator\DtoCreatorCommand:
     class: Eva\DtoCreator\DtoCreatorCommand
 
+  App\Repository\Category\CategoryRepositoryInterface:
+    class: App\Repository\Category\CategoryRepository
+
+  App\Repository\Article\ArticleRepositoryInterface:
+    class: App\Repository\Article\ArticleRepository
+
 service_providers:
   - Eva\EventDispatcher\EventDispatcherProvider
   - App\ServiceProviders\LoggerServiceProvider

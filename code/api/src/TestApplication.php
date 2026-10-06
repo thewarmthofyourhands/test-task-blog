@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace App;
 
+use Eva\Env\Env;
+
 class TestApplication extends Application
 {
     protected function initializeChdir(): void
