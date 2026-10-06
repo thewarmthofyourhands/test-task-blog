@@ -29,6 +29,11 @@ final class GetCategoryIndexUseCase
         }
         unset($category);
 
+        $categories = array_values(array_filter(
+            $categories,
+            static fn (array $category): bool => $category['articles'] !== []
+        ));
+
         return $categories;
     }
 }

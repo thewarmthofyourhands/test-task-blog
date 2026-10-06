@@ -2,8 +2,9 @@
 ````
 //запускать из основной папки
 docker compose up -d
-docker compose exec api composer i
 docker compose exec api php ./bin/console db.migrations.migrate
+docker compose exec api php ./bin/console app.seed.default
+
 ````
 
 ### Local Tests
